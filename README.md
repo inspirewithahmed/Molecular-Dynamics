@@ -111,7 +111,6 @@ The observables tracked are H-bond formation over time, backbone and side-chain 
 | `hbond_amd.png` | H-bond count vs frame — D1Cl1 aMD |
 | `aryl_aryl_distance.png` | Aryl–aryl interaction distances (14 pairs) |
 | `ring_ring_distance.png` | Ring–ring centroid distances (A–C, A–D, B–C, B–D) |
-| `radgyr_frequency.png` | Radius of gyration distribution — all four systems |
 | `pca_surface.png` | PCA probability density surfaces — all four systems |
 
 ---
@@ -199,11 +198,6 @@ sbatch launch-aMD.sh
 ![Ring-ring distance](ring_ring_distance.png)
 
 *Ring_A-D (gold) consistently sits at ~6 Å, indicative of persistent intramolecular π–π stacking between BDP pyrrole rings.*
-
-### Radius of Gyration Distribution
-![Radius of gyration frequency](radgyr_frequency.png)
-
-*D1Cl1 and D2Cl2 are the most compact (peak at 4.5 Å); D1Cl2 and D2Cl1 are broader, reflecting greater conformational flexibility.*
 
 ### PCA Probability Density Surface
 ![PCA surface — all systems](pca_surface.png)
