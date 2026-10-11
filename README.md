@@ -21,26 +21,56 @@ The observables tracked are H-bond formation over time, backbone and side-chain 
 ```
 Molecular-Dynamics/
 │
-├── scripts/                    # Python analysis and plotting scripts
+├── Python scripts
 │   ├── H-bond.py               # H-bond count vs. frame plotting
-│   ├── dihedral.py             # Dihedral angle time series plotting
-│   ├── pca.py                  # 3-D PCA probability density surface
-│   └── (add more as needed)
+│   ├── diheral.py              # Dihedral angle time series plotting
+│   ├── pca.py / script.py      # PCA probability density surface
+│   ├── Free_energy.py          # Free energy surface analysis
+│   ├── radgyr.py               # Radius of gyration analysis
+│   ├── rmsd.py                 # RMSD time series
+│   ├── D_vs_T.py               # Distance vs. temperature
+│   ├── frequency.py            # Frequency analysis
+│   ├── graph.py / launch_plot.py  # General plotting helpers
+│   ├── bdp.py / cube.py        # BDP-specific and cube file utilities
+│   └── packmol.py              # PACKMOL input generation helper
 │
-├── cpptraj/                    # CPPTRAJ input files (.traj / .in)
+├── CPPTRAJ input files (.traj)
 │   ├── H-Bond.traj
 │   ├── Dihedral_Angle.traj
 │   ├── BDP-RFP-distance.traj
 │   ├── pi_pi_Stacking.traj
 │   ├── cluster.traj
-│   └── pca.in
+│   ├── combine.traj
+│   ├── radgyr.traj
+│   ├── rmsd.traj
+│   └── sasa.traj
 │
-├── slurm/                      # SLURM job submission scripts
-│   ├── launch-aMD.sh           # Submit aMD production run (AMBER pmemd.MPI)
-│   └── combine_traj.sh         # Run CPPTRAJ analysis jobs
+├── SLURM / shell job scripts
+│   ├── launch-aMD.sh           # Submit aMD production run (pmemd.MPI)
+│   ├── launch-MD.sh            # Submit standard MD run
+│   ├── analysis.sh             # Run CPPTRAJ analysis jobs
+│   ├── chained_tremd_slurm.sh  # Chained T-REMD SLURM jobs
+│   └── gaussian.slurm          # Gaussian DFT job script
 │
-├── figures/                    # Example output figures
-│   └── example_pca_surface.png
+├── AMBER / MD input files
+│   ├── h-remd.in / remd.mdin   # REMD input parameters
+│   ├── leap.in / reduce.in     # System preparation inputs
+│   ├── groupfile / remd.groupfile
+│   └── setup_equilibrate_input.x / setup_remd_input.x
+│
+├── PACKMOL inputs
+│   ├── 8x8.inp / 8x8x8.inp / 10_molecules.inp
+│
+├── Perl utilities
+│   ├── iterative_aMD.pl
+│   ├── check_file_difference.pl / check_num_frames.pl
+│   ├── print_dihedrals.pl / renumber.pl
+│   └── strip_trajectories_by_list.pl
+│
+├── Example figures
+│   ├── free_energy_surface.png
+│   ├── radgyr_frequency.png
+│   └── D1Cl2.png
 │
 ├── requirements.txt            # Python dependencies
 ├── LICENSE                     # MIT License
@@ -56,6 +86,7 @@ Molecular-Dynamics/
 |------|---------|---------|
 | AMBER / pmemd.MPI | 24 | MD simulation engine |
 | CPPTRAJ | bundled with AMBER 24 | Trajectory analysis |
+| Gaussian | 16 / 09 | DFT calculations |
 | Python | ≥ 3.8 | Analysis & plotting |
 
 ### Python Packages
@@ -64,71 +95,44 @@ Install with:
 pip install -r requirements.txt
 ```
 
-See [`requirements.txt`](requirements.txt) for the full list.
-
 ---
 
 ## Script Usage
 
-### H-bond Analysis — `scripts/H-bond.py`
+### H-bond Analysis — `H-bond.py`
 
 Reads CPPTRAJ H-bond output and plots H-bond count as a function of simulation frame.
 
 **Input:** `intermol_hbonds.dat` (whitespace-delimited, columns `#Frame` and `H-bond`)
 
 ```bash
-python scripts/H-bond.py                          # uses default filename
-python scripts/H-bond.py --input my_hbonds.dat   # custom input file
-python scripts/H-bond.py --output my_plot.png     # custom output filename
+python H-bond.py                          # uses default filename
+python H-bond.py --input my_hbonds.dat   # custom input file
+python H-bond.py --output my_plot.png     # custom output filename
 ```
 
 **Output:** `D1Cl1-H-bond.png` (300 dpi)
 
 ---
 
-### Dihedral Angle Analysis — `scripts/dihedral.py`
-
-Plots dihedral angle time series for multiple planes (e.g. BDP and RFP aromatic planes).
-
-**Input:** `dihedral_angle.dat` (columns `#Frame`, `RFP_plane`, `BDP_plane`)
-
-```bash
-python scripts/dihedral.py
-```
-
-**Output:** `Dihedral-Angles.png` (300 dpi)
-
----
-
-### PCA — `scripts/pca.py`
-
-Generates a 3-D probability density surface from principal component data using Gaussian KDE.
-
-**Input:** `PCA.dat` (columns: PC1, PC2)
-
-```bash
-python scripts/pca.py
-```
-
-**Output:** `PCA_3D_probability_surface.png` (600 dpi)
-
----
-
-### CPPTRAJ Inputs — `cpptraj/`
+### CPPTRAJ Inputs
 
 Each `.traj` file is a CPPTRAJ input script. Run individually:
 
 ```bash
-cpptraj -i cpptraj/H-Bond.traj
-cpptraj -i cpptraj/cluster.traj
-cpptraj -i cpptraj/BDP-RFP-distance.traj
-cpptraj -i cpptraj/Dihedral_Angle.traj
-cpptraj -i cpptraj/pi_pi_Stacking.traj
+cpptraj -i H-Bond.traj
+cpptraj -i cluster.traj
+cpptraj -i BDP-RFP-distance.traj
+cpptraj -i Dihedral_Angle.traj
+cpptraj -i pi_pi_Stacking.traj
+cpptraj -i radgyr.traj
+cpptraj -i rmsd.traj
+cpptraj -i sasa.traj
 ```
 
 ---
 
-### SLURM Scripts — `slurm/`
+### SLURM Scripts
 
 **`launch-aMD.sh`** — submits an aMD production run using `pmemd.MPI`.
 
@@ -143,23 +147,20 @@ ACCOUNT=your_hpc_account         # HPC account name
 
 Submit with:
 ```bash
-sbatch slurm/launch-aMD.sh
-```
-
-**`combine_traj.sh`** — runs a selected CPPTRAJ analysis on the cluster. Uncomment the relevant `cpptraj -i` line for the analysis you need, then submit:
-```bash
-sbatch slurm/combine_traj.sh
+sbatch launch-aMD.sh
 ```
 
 ---
 
 ## Example Output
 
-### PCA Conformational Landscape
+### Free Energy Surface
 
-![PCA probability density surface](figures/example_pca_surface.png)
+![Free energy surface](free_energy_surface.png)
 
-*3-D probability density surface (Gaussian KDE) of the D1Cl1 conjugate projected onto PC1 and PC2. Trajectory: 80,000 frames of aMD simulation.*
+### Radius of Gyration Distribution
+
+![Radius of gyration frequency](radgyr_frequency.png)
 
 ---
 
