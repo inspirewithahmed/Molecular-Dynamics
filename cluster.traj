@@ -1,0 +1,14 @@
+parm *prmtop
+trajin *nc
+   
+autoimage
+center :1-1296 mass origin
+
+cluster hieragglo clusters 10 averagelinkage rms mass :1-1296@CA,C,O,N summary summary_all.dat sieve 10 random \
+out clustering_all_cpptraj.out info infofile_all.dat  repout all repfmt pdb
+
+run
+
+
+
+

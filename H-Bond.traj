@@ -1,0 +1,5 @@
+parm *prmtop
+trajin *nc
+hbond :1-1296 nointramol dist 3.0 angle 120.0 intramol out intermol_hbonds.dat avgout intermol_hbonds_avg.dat
+run
+

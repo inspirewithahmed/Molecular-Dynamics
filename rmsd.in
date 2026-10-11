@@ -1,0 +1,8 @@
+parm *prmtop
+trajin *nc
+
+autoimage
+center :1-1296@CA mass origin
+rmsd :1-1296@CA out rmsd_backbone.dat
+run
+

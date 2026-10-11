@@ -1,0 +1,6 @@
+parm *prmtop
+trajin *nc
+    
+trajout combined.nc netcdf
+run
+

@@ -1,0 +1,19 @@
+source leaprc.protein.ff19SB
+source leaprc.water.tip3p
+loadoff  Parm/BDP.off
+loadoff  Parm/RFP.off
+loadoff  Parm/OME.off
+loadoff  Parm/BOC.off
+loadamberparams  Parm/betaAA.frcmod
+loadamberparams  Parm/BOC.frcmod
+loadamberparams  Parm/OME.frcmod
+
+pep=loadpdb D1Cl1.pdb
+
+check pep
+
+solvatebox pep TIP3PBOX 5.0
+
+saveamberparm pep D1Cl1_TREMD.prmtop D1Cl1_TRMED.inpcrd
+savepdb pep D1Cl1_TREMD.pdb 
+ quit

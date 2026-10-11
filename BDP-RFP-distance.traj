@@ -1,0 +1,10 @@
+parm *prmtop
+trajin *nc
+
+distance Ring_A-C :3@CD21,CE22,CG22,CD22,CG21,CE21 :5@CD1,CE,CD,CG,CB,CG1 out BDP-RFP_distance.dat
+distance Ring_A-D :3@CD21,CE22,CG22,CD22,CG21,CE21 :5@CE2,CZ,CE1,CD2,CG2,CD3 out BDP-RFP_distance.dat
+distance Ring_B-C :3@CD11,CE11,CG11,CD12,CG12,CE12 :5@CD1,CE,CD,CG,CB,CG1 out BDP-RFP_distance.dat
+distance Ring_B-D :3@CD11,CE11,CG11,CD12,CG12,CE12 :5@CE2,CZ,CE1,CD2,CG2,CD3 out BDP-RFP_distance.dat
+
+run
+

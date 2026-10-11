@@ -1,0 +1,18 @@
+remd run 200ns no shake GB-Neck2
+ &cntrl
+   irest=1, ntx=5, 
+   nstlim=2000, dt=0.001,
+   ntt=3, gamma_ln=1.0,
+   temp0=XXXXX, ig=RANDOM_NUMBER,
+   ntc=1, ntf=1, nscm=1000,
+   ntb=0, igb=5,
+   cut=999.0, rgbmax=999.0,
+   ntpr=1000, ntwx=1000, ntwr=100000,
+   nmropt=1,
+   numexchg=100000,
+   ioutfm=1,
+ /
+ &wt TYPE='END'
+ /
+DISANG=D1Cl1_CHIR.dat
+

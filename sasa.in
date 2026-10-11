@@ -1,0 +1,7 @@
+parm *prmtop
+trajin *nc
+    
+autoimage
+surf out sasa_combined_total.dat :1-1296
+run
+

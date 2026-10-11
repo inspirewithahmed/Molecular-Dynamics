@@ -1,0 +1,7 @@
+parm BOC-ALA-RFP-ALA-BDP-OME.prmtop
+trajin BOC-ALA-RFP-ALA-BDP-OME.pdb 1 1 1
+strip !:1-6
+autoimage
+surf out sasa_monomer_isolated.dat :1-4
+run
+

@@ -1,0 +1,324 @@
+tolerance 2.0
+filetype pdb
+output D1Cl1_8x8.pdb
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 0.0 0.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 25.0 0.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 50.0 0.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 75.0 0.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 100.0 0.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 125.0 0.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 150.0 0.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 175.0 0.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 0.0 15.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 25.0 15.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 50.0 15.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 75.0 15.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 100.0 15.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 125.0 15.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 150.0 15.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 175.0 15.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 0.0 30.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 25.0 30.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 50.0 30.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 75.0 30.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 100.0 30.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 125.0 30.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 150.0 30.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 175.0 30.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 0.0 45.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 25.0 45.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 50.0 45.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 75.0 45.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 100.0 45.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 125.0 45.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 150.0 45.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 175.0 45.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 0.0 60.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 25.0 60.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 50.0 60.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 75.0 60.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 100.0 60.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 125.0 60.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 150.0 60.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 175.0 60.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 0.0 75.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 25.0 75.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 50.0 75.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 75.0 75.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 100.0 75.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 125.0 75.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 150.0 75.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 175.0 75.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 0.0 90.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 25.0 90.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 50.0 90.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 75.0 90.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 100.0 90.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 125.0 90.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 150.0 90.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 175.0 90.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 0.0 105.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 25.0 105.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 50.0 105.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 75.0 105.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 100.0 105.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 125.0 105.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 150.0 105.0 0.0   0.0 0.0 0.0
+end structure
+
+structure D1Cl1_Conf-1.pdb
+  number 1
+  fixed 175.0 105.0 0.0   0.0 0.0 0.0
+end structure
+

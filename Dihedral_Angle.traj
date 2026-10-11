@@ -1,0 +1,7 @@
+parm *prmtop
+trajin *nc
+
+dihedral RFP_plane :3@CD21,CE22,CG22,CD22,CG2,CE21 :3@CD11,CE12,CG12,CD12,CG1,CE1 :3@CA :3@CB out dihedral_angle.dat
+dihedral BDP_plane :5@CB,CG,CD,CE,CD1,CG1 :5@CG2,CD2,CE1,CZ,CE2,CD3 :5@CA :5@CB1 out dihedral_angle.dat 
+
+run

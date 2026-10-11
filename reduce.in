@@ -1,0 +1,4 @@
+parm D1Cl1_R6.prmtop
+trajin md_D1Cl1_R6.mdcrd
+trajout D1Cl1_R6.nc netcdf
+run

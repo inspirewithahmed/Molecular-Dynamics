@@ -1,0 +1,5 @@
+parm *prmtop 
+trajin *nc 
+radgyr pep :1-6@CA,C,N,O,H out radgyr_backbone.dat 
+#radgyr protein :1-186@CA,C,N,O,H out radgyr_backbone.dat
+ 

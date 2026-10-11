@@ -1,0 +1,11 @@
+parm *prmtop
+trajin *nc
+
+reference BOC-ALA-RFP-ALA-BDP-OME.pdb
+autoimage
+
+center :1-6@CA mass origin
+rmsd :1-6@CA out rmsd.dat
+
+run
+
