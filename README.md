@@ -104,14 +104,18 @@ The observables tracked are H-bond formation over time, backbone and side-chain 
 | `temperature.dat` | Temperature data (T-REMD output) |
 | `free_energy_surface.png` | Free energy landscape |
 | `D1Cl2.png` | D1Cl2 system structure (VMD) |
-| `LUMO-179-conf-1.tif` | HOMO/LUMO orbitals (Gaussian/DFT output) |
-| `rmsd.png` | RMSD time series — D1Cl1 aMD |
-| `sasa.png` | SASA time series — D1Cl1 aMD |
-| `dihedral_angle.png` | BDP & RFP dihedral angle time series |
-| `hbond_amd.png` | H-bond count vs frame — D1Cl1 aMD |
-| `aryl_aryl_distance.png` | Aryl–aryl interaction distances (14 pairs) |
-| `ring_ring_distance.png` | Ring–ring centroid distances (A–C, A–D, B–C, B–D) |
-| `pca_surface.png` | PCA probability density surfaces — all four systems |
+| `D1Cl1_Major.png` | Major cluster representative — D1Cl1 (VMD) |
+| `HOMO-LUMO.png` | HOMO/LUMO orbitals (Gaussian/DFT output) |
+| `RMSD.png` | RMSD time series — D1Cl1 aMD |
+| `SASA.png` | SASA time series — D1Cl1 aMD |
+| `Dihedral-angle.png` | BDP & RFP dihedral angle time series |
+| `H-bond.png` | H-bond count vs frame — D1Cl1 aMD |
+| `Aryl-Aryl.png` | Aryl–aryl interaction distances (14 pairs) |
+| `Ring_distance.png` | Ring–ring centroid distances (A–C, A–D, B–C, B–D) |
+| `Radgyr.png` | Radius of gyration distribution — all four systems |
+| `PCA.png` | PCA probability density surfaces — all four systems |
+| `Binding_Energy_1.png` | Binding energy analysis — configuration 1 |
+| `Binding_Energy_2.png` | Binding energy analysis — configuration 2 |
 
 ---
 
@@ -170,44 +174,60 @@ sbatch launch-aMD.sh
 ## Example Output
 
 ### RMSD — System Equilibration
-![RMSD time series](rmsd.png)
+![RMSD time series](RMSD.png)
 
 *RMSD drops from ~65 Å and plateaus around 28 Å after ~15 000 frames, confirming equilibration of the D1Cl1 aggregate.*
 
 ### SASA — Burial of Hydrophobic Surface
-![SASA time series](sasa.png)
+![SASA time series](SASA.png)
 
 *SASA falls from ~7 700 Å² to a stable ~4 000 Å², reflecting progressive self-assembly and core burial.*
 
 ### H-bond Dynamics — aMD
-![H-bond count vs frame](hbond_amd.png)
+![H-bond count vs frame](H-bond.png)
 
 *Steady 80–95 intermolecular H-bonds across 80 000 frames (1.6 μs effective time) in the aMD ensemble.*
 
 ### Dihedral Angles — BDP and RFP Planes
-![Dihedral angle time series](dihedral_angle.png)
+![Dihedral angle time series](Dihedral-angle.png)
 
 *BDP plane (blue) is rigid near −135°; the RFP plane (gold) undergoes a conformational transition around frame 47 000.*
 
 ### Aryl–Aryl Interaction Distances
-![Aryl-aryl interaction distances](aryl_aryl_distance.png)
+![Aryl-aryl interaction distances](Aryl-Aryl.png)
 
 *14 aryl–aryl pair distances tracked over 140 000 frames. Several pairs fall below the 5 Å π–π stacking threshold, particularly after the initial rapid assembly phase (~0–15 000 frames).*
 
 ### Ring–Ring Centroid Distances
-![Ring-ring distance](ring_ring_distance.png)
+![Ring-ring distance](Ring_distance.png)
 
 *Ring_A-D (gold) consistently sits at ~6 Å, indicative of persistent intramolecular π–π stacking between BDP pyrrole rings.*
 
+### Radius of Gyration Distribution
+![Radius of gyration](Radgyr.png)
+
+*D1Cl1 and D2Cl2 are the most compact (peak at 4.5 Å); D1Cl2 and D2Cl1 are broader, reflecting greater conformational flexibility.*
+
 ### PCA Probability Density Surface
-![PCA surface — all systems](pca_surface.png)
+![PCA surface — all systems](PCA.png)
 
 *3-D Gaussian KDE surfaces in PC1–PC2 space for all four BDP–peptide conjugates. All systems show a dominant central basin with minor secondary states.*
 
 ### HOMO/LUMO Orbitals
-![HOMO and LUMO orbitals](LUMO-179-conf-1.tif)
+![HOMO and LUMO orbitals](HOMO-LUMO.png)
 
 *DFT-computed frontier molecular orbitals (Gaussian 16). HOMO–LUMO gap: 0.09 a.u. Both orbitals are localised on the BDP chromophore.*
+
+### Binding Energy — Configuration 1
+![Binding energy configuration 1](Binding_Energy_1.png)
+
+### Binding Energy — Configuration 2
+![Binding energy configuration 2](Binding_Energy_2.png)
+
+### Major Cluster Representative (D1Cl1)
+![D1Cl1 major cluster](D1Cl1_Major.png)
+
+*Most populated conformational cluster from aMD trajectory, visualised in VMD.*
 
 ### Free Energy Surface
 ![Free energy surface](free_energy_surface.png)
