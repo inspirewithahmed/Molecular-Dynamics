@@ -225,8 +225,8 @@ If you use these scripts, please cite:
 ## Author
 
 **Ahmed Saeed**  
-Marie Skłodowska-Curie Doctoral Fellow  
-Università degli Studi di Milano, Italy & Universitat Politècnica de Catalunya, Barcelona, Spain  
+Marie Skłodowska-Curie Doctoral Fellow — [NanoReMedi EU Doctoral Network](https://www.nanoremedi.eu/)  
+[![Università degli Studi di Milano](https://img.shields.io/badge/Universit%C3%A0_degli_Studi_di_Milano%2C_Italy-003087?style=flat&logoColor=white)](https://www.unimi.it/en) [![Universitat Politècnica de Catalunya](https://img.shields.io/badge/Universitat_Polit%C3%A8cnica_de_Catalunya%2C_Barcelona-D2232A?style=flat&logoColor=white)](https://www.upc.edu/en)  
 📧 saeed.ahmed@unimi.it  
 🔗 [ORCID](https://orcid.org/0009-0003-9717-5180) · [Google Scholar](https://scholar.google.com/citations?user=GkT5UZUAAAAJ&hl=en) · [LinkedIn](https://www.linkedin.com/in/ahmed-saeed-833a74157)
 
